@@ -11,14 +11,14 @@ const app = express();
 const port = 8888;
 
 const openai = new OpenAI({
-  apiKey: "sk-proj-UtJ1xsIMeMDCEt2wzop5T3BlbkFJ3YxuU5IrGkhH20QPIRGn",
+  apiKey: "sk-proj-6oM6501jHDEcMxSIiAWKT3BlbkFJuHsDD2JE3kpw1aa0wBTF",
 });
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "client/public")));
 
-//fetch(`http://localhost:8888/message/${className}/${diflevel}/${user.primaryEmailAddress}/${inputMsg}`)
+// fetch(`http://localhost:8888/message/${className}/${diflevel}/${user.primaryEmailAddress}/${inputMsg}`)
 app.get("/message/:class/:diflevel/:email/:msg", async (req, res) => {
   const className = req.params.class;
   const difLevel = req.params.diflevel;
